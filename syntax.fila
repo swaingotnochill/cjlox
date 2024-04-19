@@ -1,0 +1,160 @@
+// This is a comment.
+
+print "Hello, world!"; // semicolon good.
+
+// Automatic memory management with Garbage Collector.
+
+var a = true;
+var b = false;
+var c = 12345; // integer
+var d = 1.234; // float
+var e = "This is a string";
+var f = nil; // Null . Since fila will be dynamically typed, just having nil is easier than not having it in the first place lol.
+
++
+-
+*
+/
+!
+
+var g = c + c;
+
+<
+>
+<=
+>=
+
+==
+!=
+
+and
+or
+
+var minValue = 6;
+var maxValue = 9;
+
+var avg = (minValue + maxValue) / 2;
+print avg;
+
+if(a) {
+    print "true";
+} else {
+    print "false";
+}
+
+var a = 1;
+while ( a < 10 ) {
+    print a;
+    a = a + 1;
+}
+
+for( var a = 1; a < 10; a = a + 1 ) {
+    print a;
+}
+
+
+funnn printSum ( a, b) {
+    print a + b;
+}
+
+printSum(6, 9);
+
+funnn returnSum(a, b) {
+    return a+b;
+}
+
+var sum = returnSum(a,b) // value is returned.
+var sum = printSum(a,b) // here sum will be nil because it does not return anything.
+
+
+// passing funnntions since they will be first class in fila.
+
+funnn addPair(a, b) {
+    return a+b;
+}
+funnn identity(a) {
+    return a;
+}
+
+print identity(addPair)(6,9); // this should print 15.
+
+
+funnn outerfunnntion() {
+    funnn localfunnntion() {
+        print "I am a local funnntion";
+    }
+
+    localfunnntion();
+}
+
+// Closures.
+
+funnn returnfunnntion() {
+    var outside = "this is outside";
+
+    funnn inner() {
+        print outside;
+    }
+
+    return inner;
+}
+
+var fn = returnfunnntion(); fn();
+
+
+class Breakfast {
+    cook () {
+        print "cooking chicken";
+    }
+
+    serve(who) {
+        print "Enjoy your dish" + who + ".";
+    }
+}
+
+var someVariable = Breakfast;
+
+someFunction(Breakfast);
+
+var breakfast = Breakfast();
+print breakfast; // instance of the Breakfast
+
+
+class Breakfast {
+    init(meat, bread) {
+        this.meat = meat;
+        this.bread = bread;
+    }
+
+    //...
+}
+
+class Brunch < Breakfast {
+   drink() {
+        print "How about a drink?"
+   } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
